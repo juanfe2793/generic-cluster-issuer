@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  cluster-issuer:
+  - apiVersion: v2
+    created: "2022-08-23T11:12:36.440222-05:00"
+    description: A Helm chart for a generic Cluster Issuer.
+    digest: 1b5bf11984c69f4d9fefd1f26fe4f5e96b79f4dcaa56cc389892d1e549535a07
+    name: cluster-issuer
+    type: application
+    urls:
+    - https://github.com/juanfe2793/generic-cluster-issuer/cluster-issuer-0.0.1.tgz
+    version: 0.0.1
+generated: "2022-08-23T11:12:36.439485-05:00"
