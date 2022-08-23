@@ -5,7 +5,7 @@
 # The email to use in the certificate.
 email: # my-email@gmail.com
 
-# The Server endpoint to issue the certificate. We use Let's Encrypt at Twilio with the ACME.
+# The Server endpoint to issue the certificate. We use Let's Encrypt.
 # This Cluster Issuer uses a single challenge HTTP01 solver with Contour
 # We recommend don't change the server.
 # List of available servers could be found here: https://letsencrypt.status.io/pages/55957a99e800baa4470002da
