@@ -1,0 +1,18 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: cluster
+spec:
+  acme:
+    email: {{ .Values.email }}
+    server: {{ .Values.server }}
+    privateKeySecretRef:
+      # Secret resource that will be used to store the account's private key.
+      name: {{ .Values.privateKeySecretRef.name}}
+    solvers:
+    - selector:
+        dnsZones:
+          - {{ .Values.aws.dnsHostedZone }}
+      dns01:
+        route53:
+          region: {{ .Values.aws.region }}

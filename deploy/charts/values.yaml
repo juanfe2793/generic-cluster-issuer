@@ -1,0 +1,21 @@
+# Default values for the OTK ClusterIssuer.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# The email to use in the certificate.
+email: # my-email@gmail.com
+
+# The Server endpoint to issue the certificate. We use Let's Encrypt at Twilio with the ACME.
+# This Cluster Issuer uses a single challenge HTTP01 solver with Contour
+# We recommend don't change the server.
+# List of available servers could be found here: https://letsencrypt.status.io/pages/55957a99e800baa4470002da
+server: https://acme-v02.api.letsencrypt.org/directory
+
+# The SecretName where we store the PrivateKey
+privateKeySecretRef:
+  name: #issuer-account-key
+
+# The AWS specific Region and Route 53 HostedZone to use in the ACME challenge verification process.
+aws:
+  region: us-east-1
+  dnsHostedZone: #"my-domain"
